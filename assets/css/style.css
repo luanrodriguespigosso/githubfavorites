@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Poppins", sans-serif;
+
+  --hue: 250;
+  --primary-color: hsl(var(--hue), 59%, 51%);
+  --tr-primary: hsl(var(--hue), 10%, 95%);
+  --tr-secondary: hsl(var(--hue), 10%, 92%);
+  --link-color: hsl(var(--hue), 255%, 255%);
+  --text-color: hsl(var(--hue), 0%, 19%);
+  --boder-button: hsl(var(--hue), 0%, 81%);
+  --times-color: hsl(0, 200%, 50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 80rem;
+  padding: 5rem 1rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+header .fa-github {
+  font-size: 5rem;
+}
+
+.search {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.search input {
+  height: 3rem;
+  border: 0.1rem solid var(--boder-button);
+  border-right: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0 0.8rem;
+}
+
+.search button {
+  height: 3rem;
+  color: var(--link-color);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.3);
+}
+
+.search button a {
+  color: var(--link-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th {
+  font-weight: normal;
+  text-align: left;
+  color: var(--link-color);
+  background: var(--primary-color);
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+table tr {
+  background: var(--tr-primary);
+}
+
+table tr:hover {
+  background: var(--tr-secondary);
+}
+/* nth-child(odd) Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc. */
+/* table tr:nth-child(odd) {
+  background: var(--tr-primary);
+}*/
+
+/* nth-child(even) Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc. */
+/*table tr:nth-child(even) {
+  background: var(--tr-secondary);
+} */
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1rem 2rem -1rem rgb(0, 0, 0, 1);
+}
+
+td.user a p {
+  font-weight: 600;
+}
+
+td.repositories span,
+td.followers span {
+  color: var(--primary-color);
+  background: var(--link-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+td .remove {
+  font-size: 2rem;
+  color: var(--link-color);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+td .remove:hover {
+  filter: brightness(1.3);
+}

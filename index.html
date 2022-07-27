@@ -2,49 +2,81 @@
 <html lang="pt-br">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Favorites</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Github Favorites</h1>
-    <div>
-      <label for="search">usuário do github</label>
-      <input id="search" type="text" placeholder="usuário do github">
-      <button>
-        <a href="/">&plus;</a>
-      </button>
-    </div>
-  </header>
-  <table>
-    <thead>
-      <th>Usuários</th>
-      <th>Repositórios</th>
-      <th>Seguidores</th>
-      <th></th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <img src="https://github.com/luanrodriguespigosso.png" alt="Imagem de Luan Rodrigues Pigosso">
-          <a href="https://github.com/luanrodriguespigosso/"></a>
-          <p>Luan Rodrigues Pigosso</p>
-          <span>luanrodriguespigosso</span>
-        </td>
-        <td>
-          76
-        </td>
-        <td>
-          9999
-        </td>
-        <td>
-          <button>&times;</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="app">
+    <header>
+      <h1>
+        <span class="github">
+          <i class="fa-brands fa-github"></i>
+        </span>
+        Favorites
+      </h1>
+      <div class="search">
+        <label class="sr-only" for="input-search">Usuário do Github</label>
+        <input id="input-search" type="text" placeholder="Usuário do Github">
+        <button>
+          <a href="/">&plus;</a>
+        </button>
+      </div>
+    </header>
+    <table>
+      <thead>
+        <th>Users</th>
+        <th>Repositories</th>
+        <th>Followers</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/luanrodriguespigosso.png" alt="Imagem de Luan Rodrigues Pigosso">
+            <a href="https://github.com/luanrodriguespigosso/">
+              <p>Luan Pigosso</p>
+              <span>luanrodriguespigosso</span>
+            </a>
+          </td>
+          <td class="repositories">
+            <span>76</span>
+          </td>
+          <td class="followers">
+            <span>21</span>
+          </td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/felipe-gomes-vicente.png" alt="Imagem de Felipe Gomes Vicente">
+            <a href="https://github.com/luanrodriguespigosso/">
+              <p>Felipe Gomes Vicente</p>
+              <span>felipegomesvicente</span>
+            </a>
+          </td>
+          <td class="repositories">
+            <span>137</span>
+          </td>
+          <td class="followers">
+            <span>277</span>
+          </td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 
 </html>
