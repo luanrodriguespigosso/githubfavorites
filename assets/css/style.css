@@ -87,6 +87,14 @@ header .fa-github {
   padding: 0 0.8rem;
 }
 
+.search input:focus {
+  outline-color: var(--primary-color);
+}
+
+/* .search input:placeholder-shown {
+  border-color: var(--times-color);
+} */
+
 .search button {
   height: 3rem;
   color: var(--link-color);
